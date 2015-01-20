@@ -1,12 +1,15 @@
 # PEAR
-This is how you get it:
+官網上有詳細安裝說明：
 ```text
 http://pear.php.net/manual/en/installation.getting.php
 ```
 
-# [Composer][composer]
-[Composer][composer]是[PHP][php]的管理工具，在本项目用于安装开发中使用到的[PHP][php]工具。Windows下可以使用[安装包](https://getcomposer.org/Composer-Setup.exe "Windows安装包")进行安装，并且自动更新`PATH`环境变量。由于官方的服务器全在中国大陆以外，所以在大陆使用会比较慢，而且不太稳定。目前在中国大陆地区可以使用[国内镜像](http://pkg.phpcomposer.com/)。该站点内有使用说明，一般建议使用全局配置的方法。
+# [Composer](https://getcomposer.org)
+Composer是PHP的依賴管理工具。Windows下可以使用[安裝包](https://getcomposer.org/Composer-Setup.exe "Windows安裝包")進行安裝，並且自動更新`PATH`環境變量。
+
+天朝之外，蠻夷之境，不服教化，吾等子民，不欲前往。高牆之內，率土之濱，豎立[鏡像](http://pkg.phpcomposer.com/)，以惠吾民。
 ```text
 http://pkg.phpcomposer.com/
 ```
+該站點內有使用說明，一般建議使用全局配置的方法。
 

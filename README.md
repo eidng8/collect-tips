@@ -1,5 +1,6 @@
 [简体中文](README.zh.md) [繁体中文](README.zh-Hant.md)
 
+
 ## [Haroopad](http://pad.haroopress.com/user.html)
 ![Haroopad Logo](http://pad.haroopress.com/assets/images/logo-small.png)
 The Markdown editor I use. There are many similar products out there, each with their own strength. I choose it for cross platform, a the nice TOC feature, and it's free. :smirk:
@@ -18,11 +19,26 @@ Or from git-scm
 http://git-scm.com/downloads
 ```
 
+### Markdown
 
-## [Mac OS](macos.md)
+#### Reference
+Here's a better reference guide
+```text
+http://coapp.org/reference/garrett-flavored-markdown.html
+```
+With both GitHub and Garrett flavor. The thing I love most is the [list of supported language](http://coapp.org/reference/garrett-flavored-markdown.html#precode).
 
 
 ## [Apache HTTP](apache.md)
+
+
+## [Jenkins](jenkins.md)
+
+
+## [JavaScript](js.md)
+
+
+## [Mac OS](macos.md)
 
 
 ## [Nginx](nginx.md)
@@ -31,7 +47,7 @@ http://git-scm.com/downloads
 ## [PHP](php.md)
 
 
-## [JavaScript](js.md)
+## [Swift](swift.md)
 
 
-## [Jenkins](jenkins.md)
+## [Tools](tools.md)

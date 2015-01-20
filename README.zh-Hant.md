@@ -1,4 +1,4 @@
-[English](README.md) [简体中文](README.zh.md)
+[English](README.zh-Hant.md) [简体中文](README.zh.zh-Hant.md)
 
 
 ## [Haroopad](http://pad.haroopress.com/user.html)
@@ -19,11 +19,24 @@ git-scm也有提供：
 http://git-scm.com/downloads
 ```
 
-
-## [Mac OS](macos.zh-Hant.md)
+#### 使用手冊
+以下是一個比較好的使用手冊
+```text
+http://coapp.org/reference/garrett-flavored-markdown.html
+```
+該手冊中用 GitHub 及 Garrett 的語法。最好的是它提供了一個[語言列表](http://coapp.org/reference/garrett-flavored-markdown.html#precode).
 
 
 ## [Apache HTTP](apache.zh-Hant.md)
+
+
+## [Jenkins](jenkins.zh-Hant.md)
+
+
+## [JavaScript](js.zh-Hant.md)
+
+
+## [Mac OS](macos.zh-Hant.md)
 
 
 ## [Nginx](nginx.zh-Hant.md)
@@ -32,7 +45,7 @@ http://git-scm.com/downloads
 ## [PHP](php.zh-Hant.md)
 
 
-## [JavaScript](js.zh-Hant.md)
+## [Swift](swift.zh-Hant.md)
 
 
-## [Jenkins](jenkins.zh-Hant.md)
+## [Tools](tools.zh-Hant.md)
