@@ -14,3 +14,7 @@ There are difficulties for people from inside China mainland to access outside w
 http://pkg.phpcomposer.com/
 ```
 There are instructions on the site. It is suggested to use the global configuration options.
+
+
+# Discuz X
+every entry point requires /source/class/class_core.php
