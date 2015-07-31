@@ -4,7 +4,7 @@
 ## [Haroopad](http://pad.haroopress.com/user.html)
 
 ![Haroopad Logo](http://pad.haroopress.com/assets/images/logo-small.png)
-The Markdown editor I use. There are many similar products out there, each with their own strength. I choose it for cross platform, a the nice TOC feature, and it's free. :smirk:
+The Markdown editor I use. There are many similar products out there, each with their own strength. I choose it for cross platform, the nice TOC feature, and it's free. :smirk:
 
 
 ## [GitHub](http://github.com/)
