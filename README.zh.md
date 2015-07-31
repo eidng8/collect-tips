@@ -1,4 +1,4 @@
-[English](README.md) [繁体中文](README.zh-Hant.md)
+[English](README.md) [繁体中文](README.zh.md)
 
 
 ## [Haroopad](http://pad.haroopress.com/user.html)
@@ -30,16 +30,16 @@ http://git-scm.com/downloads
 
 ## 话题
 
-### [Apache HTTP](apache.zh-Hant.md)
+### [Apache HTTP](apache.zh.md)
 
-### [JavaScript](js.zh-Hant.md)
+### [JavaScript](js.zh.md)
 
-### [Mac OS](macos.zh-Hant.md)
+### [Mac OS](macos.zh.md)
 
-### [Nginx](nginx.zh-Hant.md)
+### [Nginx](nginx.zh.md)
 
-### [PHP](php.zh-Hant.md)
+### [PHP](php.zh.md)
 
-### [Swift](swift.zh-Hant.md)
+### [Swift](swift.zh.md)
 
-### [Tools](tools.zh-Hant.md)
+### [Tools](tools.zh.md)
