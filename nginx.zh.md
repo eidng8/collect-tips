@@ -71,10 +71,3 @@ request_terminate_timeout
 优化fastcgi中，还可以改改这个值5s 看看效果。
 
 php-cgi进程数不够用、php执行时间长、或者是php-cgi进程死掉，都会出现502错误。
-
-
-## 优化
-
-- 这篇[博文](http://blog.martinfjordvald.com/2011/04/optimizing-nginx-for-high-traffic-loads/)甚好。
-
-- 错误(24: Too many open files)可能说明要增加文件打开阀值（ulimit or worker_rlimit_nofile）。

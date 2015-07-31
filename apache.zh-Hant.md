@@ -1,19 +1,28 @@
-# Alias
-The order of `Alias` is **significant** for nested aliases. Say
+[TOC]
+
+
+## `Alias`
+
+`Alias` 配置的順序**千萬**不能亂。如：
+
 ```apacheconf
-# this is correct
+# 正確
 Alias /parent/child1/ "/path/to/child/1"
 Alias /parent/child2/ "/path/to/child/2"
 Alias /parent/        "/path/to/parent"
 ```
-The aobve yields the desired mapping. If the order is reversed to
+
+如果將其倒轉：
+
 ```apacheconf
-# this is wrong
+# 錯誤
 Alias /parent/        "/path/to/parent"
 Alias /parent/child1/ "/path/to/child/1"
 Alias /parent/child2/ "/path/to/child/2"
 ```
-You'll get error like
+
+就會出錯：
+
 ```text
 The Alias directive in /some/httpd.conf at line 5 will probably never match because it overlaps an earlier Alias
 ```

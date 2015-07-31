@@ -5,12 +5,12 @@
 - Is socket is accesible?
 
 Others also said:
-- 查看当前的PHP FastCGI进程数是否够用：
+- 查看當前的PHP FastCGI進程數是否夠用：
   ```bash
   netstat -anpo | grep "php-cgi" | wc -l
   ```
-  如果实际使用的“FastCGI进程数”接近预设的“FastCGI进程数”，那么，说明“FastCGI进程数”不够用，需要增大。
-- 部分PHP程序的执行时间超过了Nginx的等待时间，可以适当增加nginx.conf配置文件中FastCGI的timeout时间，例如：
+  如果實際使用的「FastCGI進程數」接近預設的「FastCGI進程數」，那麼，說明「FastCGI進程數」不夠用，需要增大。
+- 部分PHP程序的執行時間超過了Nginx的等待時間，可以適當增加nginx.conf配置文件中FastCGI的timeout時間，例如：
   ```ini
   http
   {
@@ -19,62 +19,55 @@ Others also said:
     fastcgi_read_timeout 300;
   }
   ```
-- php.ini中memory_limit设低了会出错，修改了php.ini的memory_limit为64M，重启nginx，发现好了，原来是PHP的内存不足了。
+- php.ini中memory_limit設低了會出錯，修改了php.ini的memory_limit為64M，重啟nginx，發現好了，原來是PHP的內存不足了。
 - 一、max-children和max-requests
 
-一台服务器上运行着nginx php(fpm) xcache，访问量日均 300W pv左右
+一台服務器上運行著nginx php(fpm) xcache，訪問量日均 300W pv左右
 
-最近经常会出现这样的情况： php页面打开很慢，cpu使用率突然降至很低，系统负载突然升至很高，查看网卡的流量，也会发现突然降到了很低。这种情况只持续数秒钟就恢复了
+最近經常會出現這樣的情況： php頁面打開很慢，cpu使用率突然降至很低，系統負載突然升至很高，查看網卡的流量，也會發現突然降到了很低。這種情況只持續數秒鐘就恢復了
 
-检查php-fpm的日志文件发现了一些线索
+檢查php-fpm的日誌文件發現了一些線索
 
 Sep 30 08:32:23.289973 [NOTICE] fpm_unix_init_main(), line 271: getrlimit(nofile): max:51200, cur:51200
-Sep 30 08:32:23.290212 [NOTICE] fpm_sockets_init_main(), line 371: using inherited socket fd=10, “127.0.0.1:9000″
+Sep 30 08:32:23.290212 [NOTICE] fpm_sockets_init_main(), line 371: using inherited socket fd=10, 「127.0.0.1:9000〞
 Sep 30 08:32:23.290342 [NOTICE] fpm_event_init_main(), line 109: libevent: using epoll
 Sep 30 08:32:23.296426 [NOTICE] fpm_init(), line 47: fpm is running, pid 30587
 
-在这几句的前面，是1000多行的关闭children和开启children的日志
+在這幾句的前面，是1000多行的關閉children和開啟children的日誌
 
-原来，php-fpm有一个参数 max_requests，该参数指明了，每个children最多处理多少个请求后便会被关闭，默认的设置是500。因为php是把请求轮询给每个children，在大流量下，每个childre到达max_requests所用的时间都差不多，这样就造成所有的children基本上在同一时间被关闭。
+原來，php-fpm有一個參數 max_requests，該參數指明了，每個children最多處理多少個請求後便會被關閉，默認的設置是500。因為php是把請求輪詢給每個children，在大流量下，每個childre到達max_requests所用的時間都差不多，這樣就造成所有的children基本上在同一時間被關閉。
 
-在这期间，nginx无法将php文件转交给php-fpm处理，所以cpu会降至很低(不用处理php，更不用执行sql)，而负载会升至很高(关闭和开启children、nginx等待php-fpm)，网卡流量也降至很低(nginx无法生成数据传输给客户端)
+在這期間，nginx無法將php文件轉交給php-fpm處理，所以cpu會降至很低(不用處理php，更不用執行sql)，而負載會升至很高(關閉和開啟children、nginx等待php-fpm)，網卡流量也降至很低(nginx無法生成數據傳輸給客戶端)
 
-解决问题很简单，增加children的数量，并且将 max_requests 设置未 0 或者一个比较大的值：
+解決問題很簡單，增加children的數量，並且將 max_requests 設置未 0 或者一個比較大的值：
 
-打开 /usr/local/php/etc/php-fpm.conf
+打開 /usr/local/php/etc/php-fpm.conf
 
-调大以下两个参数(根据服务器实际情况，过大也不行）
+調大以下兩個參數(根據服務器實際情況，過大也不行）
 
-<value name=”max_children”>5120</value>
-<value name=”max_requests”>600</value>
+<value name=」max_children」>5120</value>
+<value name=」max_requests」>600</value>
 
-然后重启php-fpm。
+然後重啟php-fpm。
 
-二、增加缓冲区容量大小
+二、增加緩衝區容量大小
 
-将nginx的error log打开，发现“pstream sent too big header while reading response header from upstream”这样的错误提示。查阅了一下资料，大意是nginx缓冲区有一个bug造成的,我们网站的页面消耗占用缓冲区可能过大。参考老外写的修改办法增加了缓冲区容量大小设置，502问题彻底解决。后来系统管理员又对参数做了调整只保留了2个设置参数：client head buffer，fastcgi buffer size。
+將nginx的error log打開，發現「pstream sent too big header while reading response header from upstream」這樣的錯誤提示。查閱了一下資料，大意是nginx緩衝區有一個bug造成的,我們網站的頁面消耗佔用緩衝區可能過大。參考老外寫的修改辦法增加了緩衝區容量大小設置，502問題徹底解決。後來系統管理員又對參數做了調整只保留了2個設置參數：client head buffer，fastcgi buffer size。
 
 三、request_terminate_timeout
 
-如果主要是在一些post或者数据库操作的时候出现502这种情况，而不是在静态页面操作中常见，那么可以查看一下php-fpm.conf设置中的一项：
+如果主要是在一些post或者數據庫操作的時候出現502這種情況，而不是在靜態頁面操作中常見，那麼可以查看一下php-fpm.conf設置中的一項：
 
 request_terminate_timeout
 
-这个值是max_execution_time，就是fast-cgi的执行脚本时间。
+這個值是max_execution_time，就是fast-cgi的執行腳本時間。
 
 0s
 
-0s为关闭，就是无限执行下去。（当时装的时候没仔细看就改了一个数字）
+0s為關閉，就是無限執行下去。（當時裝的時候沒仔細看就改了一個數字）
 
-发现，问题解决了，执行很长时间也不会出错了。
+發現，問題解決了，執行很長時間也不會出錯了。
 
-优化fastcgi中，还可以改改这个值5s 看看效果。
+優化fastcgi中，還可以改改這個值5s 看看效果。
 
-php-cgi进程数不够用、php执行时间长、或者是php-cgi进程死掉，都会出现502错误。
-
-
-## 優化
-
-- 這篇[博文](http://blog.martinfjordvald.com/2011/04/optimizing-nginx-for-high-traffic-loads/)甚好。
-
-- 錯誤(24: Too many open files)可能說明要增加文件打開閥值（ulimit or worker_rlimit_nofile）。
+php-cgi進程數不夠用、php執行時間長、或者是php-cgi進程死掉，都會出現502錯誤。

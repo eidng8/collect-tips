@@ -1,11 +1,14 @@
-# Launching Applications
+[TOC]
+
+
+## Launching Applications
 The launching of applications in Mac OS is confusing to many, espcially when you have to change global settings, say environment variables, to the application. Here are some tips and todos to the topic.
 
 
-## Environment Varaibles
+### Environment Varaibles
 
 
-### Maverick
+#### Maverick
 When `bash` is invoked as an interactive login shell, or as a non-interactive shell with the `--login` option, it reads and executes commands, from the first of these files, that exists and is readable, in the listed order:
 
 1. /etc/profile
@@ -25,7 +28,7 @@ Some said that one can modify the file
 ```
 for the purpose. However, I've found that not all (at least not mine) boxes have this file. So it seems the `launchctl` approach is much safer to do.
 
-## prior to Mavericks
+#### prior to Mavericks
 Besides the aforementioned list of files, there was also the
 ```text
 ~/.MacOSX/environment.plist
