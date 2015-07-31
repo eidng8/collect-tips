@@ -1,4 +1,4 @@
-[English](README.md) [繁体中文](README.zh.md)
+[English](README.md) [繁体中文](README.zh-Hant.md)
 
 
 ## [Haroopad](http://pad.haroopress.com/user.html)
