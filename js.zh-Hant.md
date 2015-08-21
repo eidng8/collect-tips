@@ -1,9 +1,13 @@
 [TOC]
 
 
-[GitHub]: http://github.com/ (GitHub 官網)
-[nodejs]: http://nodejs.org/ (nodejs 官網)
-[grunt]: http://gruntjs.com/ (Grunt 官網)
+[GitHub]: http://github.com/ (GitHub 官方)
+[nodejs]: http://nodejs.org/ (nodejs 官方)
+[grunt]: http://gruntjs.com/ (Grunt 官方)
+[angular]: https://angularjs.org/ (AngularJS 官方)
+[ionic]: http://ionicframework.com/ (Ionic Official Site)
+[cordova]: https://cordova.apache.org/ (Apache Cordova Official Site)
+
 
 ## [Node.js][nodejs]
 
@@ -33,3 +37,57 @@ npm config -g set registry https://registry.npm.taobao.org
   ```bash
   npm install -g grunt-cli
   ```
+
+
+## [AngularJS][angular]
+
+開發頁面級應用的JavaScript框架。它並不是DOM操作器，也不是設計工具。[AngularJS][angular]提供了直接在瀏覽器頁面開發應用的途徑。
+
+
+### 教程
+
+#### 線上
+
+##### 官方
+
+https://docs.angularjs.org/tutorial/
+
+##### 第三方
+http://www.w3schools.com/angular/
+http://www.toptal.com/angular-js/a-step-by-step-guide-to-your-first-angularjs-app
+https://www.codecademy.com/courses/learn-angularjs
+https://thinkster.io/a-better-way-to-learn-angularjs/
+http://www.tutorialspoint.com/angularjs/
+
+
+#### PDF
+
+http://www.tutorialspoint.com/angularjs/angularjs_tutorial.pdf
+http://fastandfluid.com/publicdownloads/AngularJSIn60MinutesIsh_DanWahlin_May2013.pdf
+
+
+## [Ionic][ionic]
+
+多端應用開發框架，能同時用於開發移動及桌面應用。基於[AngularJS][angular]和[Cordova][cordova]。
+
+
+### 教程
+
+#### 線上
+
+##### 官方
+
+http://learn.ionicframework.com/
+
+##### 第三方
+
+https://ccoenraets.github.io/ionic-tutorial/
+https://thinkster.io/ionic-framework-tutorial/
+http://coenraets.org/blog/2014/10/ionic-tutorial-and-sample-application/
+https://www.airpair.com/ionic-framework/posts/ionic-socketio-chat-application-tutorial
+
+
+#### PDF
+
+https://ma.ellak.gr/documents/2014/10/ionic-framework.pdf
+http://manning.com/wilken/IonicinA_MEAP_ch01.pdf

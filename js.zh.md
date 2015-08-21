@@ -4,6 +4,10 @@
 [GitHub]: http://github.com/ (GitHub 官网)
 [nodejs]: http://nodejs.org/ (nodejs 官网)
 [grunt]: http://gruntjs.com/ (Grunt 官网)
+[angular]: https://angularjs.org/ (AngularJS 官网)
+[ionic]: http://ionicframework.com/ (Ionic Official Site)
+[cordova]: https://cordova.apache.org/ (Apache Cordova Official Site)
+
 
 ## [Node.js][nodejs]
 
@@ -33,3 +37,57 @@ npm config -g set registry https://registry.npm.taobao.org
   ```bash
   npm install -g grunt-cli
   ```
+
+
+## [AngularJS][angular]
+
+开发页面级应用的JavaScript框架。它并不是DOM操作器，也不是设计工具。[AngularJS][angular]提供了直接在浏览器页面开发应用的途径。
+
+
+### 教程
+
+#### 在线
+
+##### 官网
+
+https://docs.angularjs.org/tutorial/
+
+##### 第三方
+http://www.w3schools.com/angular/
+http://www.toptal.com/angular-js/a-step-by-step-guide-to-your-first-angularjs-app
+https://www.codecademy.com/courses/learn-angularjs
+https://thinkster.io/a-better-way-to-learn-angularjs/
+http://www.tutorialspoint.com/angularjs/
+
+
+#### PDF
+
+http://www.tutorialspoint.com/angularjs/angularjs_tutorial.pdf
+http://fastandfluid.com/publicdownloads/AngularJSIn60MinutesIsh_DanWahlin_May2013.pdf
+
+
+## [Ionic][ionic]
+
+多端应用开发框架，能同时用于开发移动及桌面应用。基于[AngularJS][angular]和[Cordova][cordova]。
+
+
+### 教程
+
+#### 在线
+
+##### 官网
+
+http://learn.ionicframework.com/
+
+##### 第三方
+
+https://ccoenraets.github.io/ionic-tutorial/
+https://thinkster.io/ionic-framework-tutorial/
+http://coenraets.org/blog/2014/10/ionic-tutorial-and-sample-application/
+https://www.airpair.com/ionic-framework/posts/ionic-socketio-chat-application-tutorial
+
+
+#### PDF
+
+https://ma.ellak.gr/documents/2014/10/ionic-framework.pdf
+http://manning.com/wilken/IonicinA_MEAP_ch01.pdf
