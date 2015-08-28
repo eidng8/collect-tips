@@ -43,3 +43,5 @@ http://git-scm.com/downloads
 ### [Swift](swift.zh.md)
 
 ### [Tools](tools.zh.md)
+
+### [开源镜像](mirrors.zh.md)

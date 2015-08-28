@@ -28,7 +28,7 @@ http://git-scm.com/downloads
 ```
 
 
-## 話題
+## Subjects
 
 ### [Apache HTTP](apache.md)
 
@@ -43,3 +43,5 @@ http://git-scm.com/downloads
 ### [Swift](swift.md)
 
 ### [Tools](tools.md)
+
+### [Public Mirrors](mirrors.md)
