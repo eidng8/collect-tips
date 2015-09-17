@@ -17,6 +17,10 @@
   - http://sdk.gdgshanghai.com 端口：8000
 - 电子科技大学开源镜像站：
   - mirrors.dormforce.net
+- Composer 中文网
+  - http://packagist.phpcomposer.com
+- Packagist 中国镜像站
+  - http://packagist.cn
 
 
 ## Android SDK 镜像

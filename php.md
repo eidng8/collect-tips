@@ -16,7 +16,7 @@ http://pear.php.net/manual/en/installation.getting.php
 
 There are a few mirrors in China mainland:
 
-- [Packagist 中国镜像站](http://pkg.phpcomposer.com/)
+- [Packagist 中国镜像站](http://packagist.cn/)
   ```text
   http://packagist.cn
   ```
@@ -27,7 +27,7 @@ There are a few mirrors in China mainland:
 
 There are configuration steps on these sits. It is suggested to use global configuration option. However, these mirrors seems not so stable either.
 
-Recently found, a Japanese mirror, which seems more stable.
+Recently found, a Japanese mirror.
 ```text
 http://pkg.uselaravel.com/repo/packagist/
 ```

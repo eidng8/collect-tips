@@ -17,7 +17,7 @@ http://pear.php.net/manual/en/installation.getting.php
 
 在中國大陸地區有一些：
 
-- [Packagist 中國鏡像站](http://pkg.phpcomposer.com/)
+- [Packagist 中國鏡像站](http://packagist.cn/)
   ```text
   http://packagist.cn
   ```
@@ -28,7 +28,7 @@ http://pear.php.net/manual/en/installation.getting.php
 
 這些站點內有使用說明，一般建議使用全局配置的方法。在使用了一段時間後發現，目前的中國鏡像站十分不穩定。
 
-最近發現了一個日本鏡像，好像比較穩定：
+最近發現了一個日本鏡像：
 ```text
 http://pkg.uselaravel.com/repo/packagist/
 ```
