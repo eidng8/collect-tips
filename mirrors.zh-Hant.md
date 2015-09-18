@@ -17,6 +17,10 @@
   - http://sdk.gdgshanghai.com 端口：8000
 - 電子科技大學開源鏡像站：
   - mirrors.dormforce.net
+- 前端公共库CDN
+  - http://www.freecdn.cn/
+- Google Fonts 镜像
+  - http://www.googlefonts.cn/
 - Packagist 中國鏡像站
   - http://packagist.cn
 - Composer 中文網
