@@ -25,6 +25,11 @@
   - http://packagist.phpcomposer.com
 - Packagist 中国镜像站
   - http://packagist.cn
+- mirrors.pubyun.com
+- mirrors.opencas.cn
+- mirrors.yun-idc.com
+- mirrors.sina.cn
+- mirrors.aliyun.com
 
 
 ## Android SDK 镜像

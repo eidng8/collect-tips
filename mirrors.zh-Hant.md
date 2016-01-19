@@ -25,6 +25,11 @@
   - http://packagist.cn
 - Composer 中文網
   - http://packagist.phpcomposer.com
+- mirrors.pubyun.com
+- mirrors.opencas.cn
+- mirrors.yun-idc.com
+- mirrors.sina.cn
+- mirrors.aliyun.com
 
 
 ## Android SDK 鏡像
