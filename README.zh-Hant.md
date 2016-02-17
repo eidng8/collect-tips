@@ -38,6 +38,9 @@ http://git-scm.com/downloads
 
 ### [Nginx](nginx.zh-Hant.md)
 
+### [HTML]
+[HTML Entity 列表](html-entities.html)
+
 ### [PHP](php.zh-Hant.md)
 
 ### [Swift](swift.zh-Hant.md)

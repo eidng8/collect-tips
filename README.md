@@ -38,6 +38,9 @@ http://git-scm.com/downloads
 
 ### [Nginx](nginx.md)
 
+### [HTML]
+[List of HTML Entities](html-entities.html)
+
 ### [PHP](php.md)
 
 ### [Swift](swift.md)
