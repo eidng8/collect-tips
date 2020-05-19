@@ -91,3 +91,9 @@ https://www.airpair.com/ionic-framework/posts/ionic-socketio-chat-application-tu
 
 https://ma.ellak.gr/documents/2014/10/ionic-framework.pdf
 http://manning.com/wilken/IonicinA_MEAP_ch01.pdf
+
+
+## [Nightwatch](https://nightwatchjs.org/)
+
+Working with sections and custom command/assert are tricky. [issue](https://github.com/nightwatchjs/nightwatch/issues/1969)
+
