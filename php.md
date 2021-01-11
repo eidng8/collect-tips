@@ -12,28 +12,36 @@ http://pear.php.net/manual/en/installation.getting.php
 ```
 
 ## [Composer](composer)
-[Composer](composer) is a [PHP](php) dependency manager. There's a [windows installer](https://getcomposer.org/Composer-Setup.exe). Remember to update the `PATH` environment variable after installation. However, the official packagist can't be accessed from China mainland.
+[Composer](composer) is a [PHP](php) dependency manager. There's a [windows installer](https://getcomposer.org/Composer-Setup.exe). Remember to update the `PATH` environment variable after installation. However, the official packagist can't be accessed from China mainland. A version of the phar file can is available on [Ali](https://mirrors.aliyun.com/composer/composer.phar) mirror site.
 
-There are a few mirrors in China mainland:
-
-- [Packagist 中国镜像站](http://packagist.cn/)
+- [阿里云镜像站](https://developer.aliyun.com/composer)
   ```text
-  http://packagist.cn
+  https://mirrors.aliyun.com/composer/
   ```
-- [Composer 中文网](http://www.phpcomposer.com/)
-  ```text
-  http://packagist.phpcomposer.com
-  ```
-
-There are configuration steps on these sits. It is suggested to use global configuration option. However, these mirrors seems not so stable either.
-
-Recently found, a Japanese mirror.
-```text
-http://pkg.uselaravel.com/repo/packagist/
-```
 
 
 ## Programming Tips
+
+### The `+` (plus) array operator
+
+The [official document](https://www.php.net/manual/en/language.operators.array.php) says it's a union operator. What it really means were merging the second array to the first,
+keeping all existing key-value in the first one.
+
+```php
+$a = array("a" => "apple", "b" => "banana");
+$b = array("a" => "pear", "b" => "strawberry", "c" => "cherry");
+$c = $a + $b; // Union of $a and $b
+// yields
+// array(3) {
+//   ["a"]=>
+//   string(5) "apple"
+//   ["b"]=>
+//   string(6) "banana"
+//   ["c"]=>
+//   string(6) "cherry"
+// }
+```
+
 
 ### `curl_multi`
 
