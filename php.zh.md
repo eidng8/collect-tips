@@ -13,28 +13,35 @@ http://pear.php.net/manual/en/installation.getting.php
 ```
 
 ## [Composer](composer)
-[Composer](composer)是[PHP](php)的管理工具。Windows下可以使用[安装包](https://getcomposer.org/Composer-Setup.exe "Windows安装包")进行安装，并且自动更新`PATH`环境变量。由于官方的服务器全在中国大陆以外，所以在大陆使用会比较慢，而且不太稳定。
+[Composer](composer)是[PHP](php)的管理工具。Windows下可以使用[安装包](https://getcomposer.org/Composer-Setup.exe "Windows安装包")进行安装，并且自动更新`PATH`环境变量。由于官方的服务器全在中国大陆以外，所以在大陆使用会比较慢，而且不太稳定。[阿里云镜像站](https://mirrors.aliyun.com/composer/composer.phar)上有PHAR版本。
 
-在中国大陆地区有一些：
-
-- [Packagist 中国镜像站](http://packagist.cn/)
+- [阿里云镜像站](https://developer.aliyun.com/composer)
   ```text
-  http://packagist.cn
+  https://mirrors.aliyun.com/composer/
   ```
-- [Composer 中文网](http://www.phpcomposer.com/)
-  ```text
-  http://packagist.phpcomposer.com
-  ```
-
-这些站点内有使用说明，一般建议使用全局配置的方法。在使用了一段时间后发现，目前的中国镜像站十分不稳定。
-
-最近发现了一个日本镜像：
-```text
-http://pkg.uselaravel.com/repo/packagist/
-```
 
 
 ## 编程
+
+### `+` （加号）数组操作符
+
+[官方文档](https://www.php.net/manual/en/language.operators.array.php)上说的意思是：将第二个数组合并入第一个数组，但保留第一个数组的原有键值内容。
+
+```php
+$a = array("a" => "apple", "b" => "banana");
+$b = array("a" => "pear", "b" => "strawberry", "c" => "cherry");
+$c = $a + $b; // Union of $a and $b
+// yields
+// array(3) {
+//   ["a"]=>
+//   string(5) "apple"
+//   ["b"]=>
+//   string(6) "banana"
+//   ["c"]=>
+//   string(6) "cherry"
+// }
+```
+
 
 ### `curl_multi`
 
