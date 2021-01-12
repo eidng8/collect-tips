@@ -11,6 +11,8 @@
 
 ## [Node.js][nodejs]
 
+### `cnpm`
+
 这个不解释，做前端的都知道，有些做后端的也都知道。
 
 由于官方的服务器全在中国大陆以外，所以在大陆使用会比较慢，而且不太稳定。目前在中国大陆地区可以使用[国内镜像](http://npm.taobao.org/)。该站点内有使用说明，一般建议使用`cnpm`。
@@ -26,6 +28,10 @@ npm install -g cnpm --registry=https://registry.npm.taobao.org
 ```bash
 npm config -g set registry https://registry.npm.taobao.org
 ```
+
+### `mirror-config-china`
+
+如果不想使用`cnpm`，可以安装`mirror-config-china`直接将所有相关东西改成国内镜像。
 
 
 ## [Grunt][grunt]
