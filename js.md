@@ -11,6 +11,8 @@
 
 ## [Node.js][nodejs]
 
+### `cnpm`
+
 No need to explain, every front-end guy knows it, some back-end guys also know it.
 
 As it's outside China mainland, accessing is difficult. [Mirror](http://npm.taobao.org/) can be used. There's descriptions on the site, `cnpm` is suggested.
@@ -26,6 +28,10 @@ Then `cnpm` can be used instead of `npm`.
 ```bash
 npm config -g set registry https://registry.npm.taobao.org
 ```
+
+### `mirror-config-china`
+
+Instead of using the `cnpm` pacakge, one could install the `mirror-config-china` package to directly change all related stuff to China mirror.
 
 
 ## [Grunt][grunt]
