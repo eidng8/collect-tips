@@ -27,6 +27,10 @@ npm install -g cnpm --registry=https://registry.npm.taobao.org
 npm config -g set registry https://registry.npm.taobao.org
 ```
 
+### `mirror-config-china`
+
+如果不想使用`cnpm`，可以安裝`mirror-config-china`直接將所有相關東西改成國內鏡像。
+
 
 ## [Grunt][grunt]
 
