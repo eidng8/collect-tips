@@ -74,10 +74,11 @@ SELECT * FROM ttt;
 * IBM DB2
 * Microsoft SQL Server
 * Apache Derby
-
+* MySQL 8+
+* 
 ###### NOT supported by
 
-* MySQL
+* MySQL 5.x
 * SQLite
 * Informix
 * Firebird
