@@ -48,3 +48,37 @@ http://git-scm.com/downloads
 ### [Tools](tools.md)
 
 ### [Public Mirrors](mirrors.md)
+
+### RDBMS
+
+#### SQL-99 feature differences
+
+##### Recursive Query
+
+https://en.wikipedia.org/wiki/Hierarchical_and_recursive_queries_in_SQL
+
+```sql
+WITH RECURSIVE ttt (c1, c2, /*c3, ...., cN*/) AS (
+  /* anchor query: The starting point of the recursion */
+  UNION ALL
+  /* recursive query: The part of the query that refers back to the common table expression itself */
+)
+-- Main query that utilizes common table expression
+SELECT * FROM ttt;
+```
+
+###### Supported by
+
+* PostreSQL
+* Oracle 11g,
+* IBM DB2
+* Microsoft SQL Server
+* Apache Derby
+
+###### NOT supported by
+
+* MySQL
+* SQLite
+* Informix
+* Firebird
+  
