@@ -75,7 +75,7 @@ SELECT * FROM ttt;
 * Microsoft SQL Server
 * Apache Derby
 * MySQL 8+
-* 
+
 ###### NOT supported by
 
 * MySQL 5.x
