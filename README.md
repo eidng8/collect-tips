@@ -75,6 +75,7 @@ SELECT * FROM ttt;
 * Microsoft SQL Server
 * Apache Derby
 * MySQL 8+
+* SQLite 3.34+ ?
 
 ###### NOT supported by
 
